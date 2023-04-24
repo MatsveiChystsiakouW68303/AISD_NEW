@@ -1,0 +1,11 @@
+n = int(input("Podaj liczbę n: "))
+ujemny_liczby = 0
+liczby = []
+i = 0
+while i < n:
+    a= int(input(f"Podaj {i+1}. liczbę: "))
+    liczby.append(a)
+    if a< 0:
+        ujemny_liczby += 1
+    i+=1
+print(ujemny_liczby)
