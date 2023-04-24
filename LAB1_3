@@ -1,0 +1,7 @@
+rand = [3,4,53,2,4,5,6,43,2,10]
+n = int(input("Podaj wartość:"))
+
+if n in rand:
+    print(f"{n} isnuje w tablicy.")
+else:
+    print(f"{n} nie isnuje w tablicy.")
