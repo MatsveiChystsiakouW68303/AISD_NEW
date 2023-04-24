@@ -1,0 +1,9 @@
+def suma(array):
+    n = len(array)
+    if n == 1:
+        return array[0]
+    else:
+        mid = n // 2
+        sum1 = suma(array[:mid])
+        sum2 = suma(array[mid:])
+        return sum1 + sum2
