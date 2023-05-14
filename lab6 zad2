@@ -1,6 +1,6 @@
-def is_balanced(string):
+def is_balanced(str):
     stack = []
-    for char in string:
+    for char in str:
         if char == "(":
             stack.append(char)
         elif char == ")":
