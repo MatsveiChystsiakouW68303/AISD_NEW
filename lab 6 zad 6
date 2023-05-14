@@ -1,0 +1,19 @@
+import random
+
+players = ['Alice', 'Bob', 'Charlie', 'David', 'Eve']
+potato_holder = None
+
+print('Welcome to Hot Potato!')
+print('The players are:', ', '.join(players))
+print('Press enter to start the game...')
+input()
+
+while len(players) > 1:
+    potato_holder = random.choice(players)
+    print(potato_holder, 'is holding the potato!')
+    input('Press enter to pass the potato...')
+    current_index = players.index(potato_holder)
+    next_index = (current_index + 1) % len(players)
+    players[current_index], players[next_index] = players[next_index], players[current_index]
+
+print('The winner is:', players[0])
