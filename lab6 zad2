@@ -2,7 +2,7 @@ def is_balanced(str):
     stack = []
     for zmien in str:
         if zmien == "(":
-            stack.append(char)
+            stack.append(zmien)
         elif zmien == ")":
             if len(stack) == 0:
                 return False
