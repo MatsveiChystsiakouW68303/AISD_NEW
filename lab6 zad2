@@ -1,9 +1,9 @@
 def is_balanced(str):
     stack = []
-    for char in str:
-        if char == "(":
+    for zmien in str:
+        if zmien == "(":
             stack.append(char)
-        elif char == ")":
+        elif zmien == ")":
             if len(stack) == 0:
                 return False
             stack.pop()
