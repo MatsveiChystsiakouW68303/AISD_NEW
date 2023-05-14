@@ -8,4 +8,4 @@ def is_balanced(str):
                 return False
             stack.pop()
     return len(stack) == 0
-print(is_balanced('((()))'))
+print(is_balanced('(((()(((()'))
