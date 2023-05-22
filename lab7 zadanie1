@@ -1,0 +1,10 @@
+def search(list, wartosc):
+    liczby = []
+    for i in range(len(list)):
+        if list[i] == wartosc:
+            liczby.append(i)
+    return liczby
+lista = [5,6,32,5,2,5,7,-6,-6,5,5]
+wartosc =int(input("Szukam wartość: "))
+print(lista)
+print(search(lista, wartosc))
