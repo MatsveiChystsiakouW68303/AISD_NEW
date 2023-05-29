@@ -1,4 +1,4 @@
-ef dijkstra(graph, start):
+def structura(graph, start):
     distances = {vertex: float('inf') for vertex in graph}
     distances[start] = 0
 
@@ -20,8 +20,8 @@ ef dijkstra(graph, start):
 
     return distances, previous
 
-def shortest_path(graph, start, end):
-    distances, previous = dijkstra(graph, start)
+def shortest(graph, start, end):
+    distances, previous = structura(graph, start)
     path = []
     current_vertex = end
 
@@ -33,18 +33,18 @@ def shortest_path(graph, start, end):
     return path
 
 graph = {
-    'A': {'B': 5, 'C': 2},
-    'B': {'A': 5, 'C': 1, 'D': 3},
-    'C': {'A': 2, 'B': 1, 'D': 2},
-    'D': {'B': 3, 'C': 2, 'E': 4},
-    'E': {'D': 4}
+    'A': {'B': 4, 'C': 2},
+    'B': {'A': 3, 'C': 3, 'D': 3},
+    'C': {'A':5, 'B': 3, 'D': 4},
+    'D': {'B': 2, 'C': 2, 'E': 4},
+    'E': {'D': 1}
 }
 
 start_vertex = 'A'
 end_vertex = 'E'
 
-distances, previous = dijkstra(graph, start_vertex)
-shortest_path = shortest_path(graph, start_vertex, end_vertex)
+distances, previous = structura(graph, start_vertex)
+shortest = shortest(graph, start_vertex, end_vertex)
 
 print("Najkrótsze odległości:", distances)
-print("Najkrótsza ścieżka:", shortest_path)
+print("Najkrótsza ścieżka:", shortest)
